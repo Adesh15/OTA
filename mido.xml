@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SlimOTA xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ota.xsd">
+<Stable>
+<mido>
+<Filename>RR-O-v6.0.0-20180502-mido-Official.zip</Filename>
+<LatestBuildUrl
+  id="latestbuild"
+  title="Latest Build"
+  description="Download Latest Build">https://sourceforge.net/projects/resurrectionremix-oreo/files/mido/RR-O-v6.0.0-20180502-mido-Official.zip/download</LatestBuildUrl>
+<BuildUrl
+  id="build"
+  title="Build"
+  description="Download a Build">https://sourceforge.net/projects/resurrectionremix-oreo/files/mido</BuildUrl>
+<GAppsUrl
+  id="GApps"
+  title="Open GApps"
+  description="Download Open GApps">http://opengapps.org<</GAppsUrl>
+<ChangelogUrl
+  id="changelog"
+  title="Changelog"
+  description="View Changelogs">https://github.com/Adesh15/OTA/blob/master/Changelog.txt</ChangelogUrl>
+</mido>
+</Stable>
+</SlimOTA>

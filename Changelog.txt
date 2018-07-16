@@ -1,284 +1,91 @@
-▼ Resurrection Remix Oreo Ver 6.1.0 Changelog
+
+ ▼ Resurrection Remix Oreo Ver 6.1.0 Changelog
 
 
 ====================
-     06-13-2018
+     07-15-2018
 ====================
 
-
-   * device/xiaomi/mido/
-b2db4b1 RR 6.1.0
 
    * frameworks/base/
-dac68736ef8 SystemUI: fix black scrim when turning screen on from AOD
-
-   * kernel/xiaomi/msm8953/
-cf078172d41f gpu: msm_adreno: Compile only Adreno codes specific to chipset
-1e479392b46b ipa_v2: don't let this prevent suspend
-c910934d3cc9 ipa_v(2/3): compile out wakelock
-964ca0cf14a9 f2fs: run fstrim asynchronously if runtime discard is on
-a8e9ef49016b f2fs: turn down IO priority of discard from background
-03a210c732fd f2fs: don't split checkpoint in fstrim
-7e1fa41d6159 f2fs: issue discard commands proactively in high fs utilization
-cf10379843fb f2fs: add fsync_mode=nobarrier for non-atomic files
-41b76e11b6ce f2fs: let fstrim issue discard commands in lower priority
-f982d2be8541 tissot_defconfig: Regenerate * Sync with mido_defconfig
-bb0d9618eccc mido_defconfig: Regenerate
-8de1a7bf0d98 Add Build Script
-8cfe7658b14b Makefile: Wrap CC in ccache
-bd0e97c79448 arm64: mmu: Fix alloc_init_pud section mismatches
-dd72f94b513d Makefile: Use -finline-functions when -O2 is used
-7e1e1482e8d9 power: Fix whitespace of BOEFFLA_WL_BLOCKER
-7b1c01ceb82f ASoC: wcd9335: Initialize variables before use
-d0d8521e88d9 ft5435: fix double tap to wake when system sleeps
-70530cc4cf18 tcp_westwood : Bump minimum RTT and lower initial RTT duration
-fda2eef4a640 tcp_westwood: use tcp_jiffies32 instead of tcp_time_stamp
-0cb76fed3962 tcp: introduce tcp_jiffies32
-dea409bdc93e boeffla_wl_blocker: Block default wakelocks we had before
-fd4b9bb26b7a usb: gadget: android: Disable false positive array-bounds warnings
-286cb6cf59e1 time: Remove CONFIG_TIMER_STATS
-a9b38a2bffb4 sched/fair: Reduce latency for better responsiveness
-418cf37582f8 sched/fair: Reduce latency
-7162dd8111b3 block: Clean-up maple-iosched.c
-f58440185117 ASoC: msm8x16-wcd: add speaker gain and prevent reset
-1ab8bd2d0651 ASoC: msm8x16-wcd: Sound control: allow further reduction of digital gain
-ed7ec770ce9c ASoC: msm8x16-wcd: Sound control: add mic gain
-d9f4dbea9992 ASoC: msm8x16-wcd: Sound control
-b1292db301bc cpufreq: interactive: Remove the jump_to_max hack
-d3145fd70d46 net: wireguard: Add tools to import source automatically
-996eb247b810 qcom: msm-core: queue work on system_power_efficient_wq
-65256d208a02 drivers: power: bcl: queue work on system_power_efficient_wq
-bfdb9b3f6c15 drivers: mdss: queue work on system_power_efficient_wq
-6a1ebac31dd4 drivers: thermal: queue work on system_power_efficient_wq
-a3774fdca050 qcom: mpm: use interruptible wait to reduce load avg
-a95139a56eed qcom: msm-core: uninterruptible wait - you can kiss my arse goodbye
-554c61d2c149 boeffla_wl_blocker: update to wakelock blocker driver v1.1.0
-9a5654598cfa boeffla_wl_blocker: update to wakelock blocker driver v1.0.1
-c18d63defdaf boeffla_wl_blocker: add generic wakelock blocker driver v1.0.0
-0f7720ccaa94 drivers: disbale kcal by default and updates
-72df97355a17 msm: mdss: KCAL: disable igc update
-6afbfeede92a msm: mdss: KCAL: Send a pp display commit when changes are made
-7b9a8c1e17f7 mdss mdp: kcal for mdss_mdp_v1_7
-ee80182fcd17 power:qpnp-charger: extended charge time from 30s to 100s when battery status is near to full
-61613f76844b cpuidle: don't disable cpuidle when entering suspend
-4a486fe5adb1 compiler-gcc: integrate the various compiler-gcc[345].h files
-22ba5ff43991 Add a simple api to query the display state (on/off) at any point in time
-80c859de1529 block: maple: Use better presets
-ae1de80aa382 block: maple: Stop abusing csd.list for fifo_time
-411f3a70ceb2 maple-iosched: Fix the -Wdeclaration-after-statement warnings
-f7bbf502eeb9 block: maple: Fix inverted logic
-b0b2c3cc37d8 block: maple: Make bools constant across functions
-0c10032bdfc0 block: maple: Use native display state instead of PowerSuspend
-4268fb28f5b8 block: maple: Serve asynchronous requests before synchronous ones
-4dde16ede1e9 block: maple: Fix some logic, import former/latter request logic from SIO, and use some improved bits of SIO
-2e20679a20f7 block: maple: Catch writes_starved sooner, increase limit.
-f2845ee12558 block: maple: Clean up and add patchlevel macro to keep track of commits
-805cd22f097a block: maple: Remove CONFIG_HZ dependency, assume 300 for interrupt frequency
-527947f6df97 block: [Introduded for 3.18.y] Add Maple I/O Scheduler
-5e7cb09d390f Makefile: Silence x.509 warning
-4e3d2f2650a0 proc: Remove additional SafetyNet flags from /proc/cmdline
-798b2978fa35 proc: Remove verifiedbootstate flag from /proc/cmdline
-db939104e5f5 cpufreq: fallback to interactive if governor is not found
-d7b87b95310d PM / devfreq: Restart previous governor if new governor fails to start
-8b452db7b404 gpio: stop dumping the stack every time a gpio isn't valid
-eab878f0789b irq: remove affinity logging
-8142928e25b1 msm: kgsl: Report correct GPU frequency in sysfs
-d94cb4423e6a PM / devfreq: Add a governor white list
-c02519b5652d printk: Ignore LOG_USER messages in kmsg
-3c0a47b05848 irqchip: Silence log spam
-91214e9a7ad9 msm: mpm: disable debugging
-b5a1249089b0 arm64: irq: remove affinity logging. Makes it hard to use dmesg with this spam
-7d37ac75f9c3 selinux: just shut up
-d1a7a6ac749e msm: vidc: disable debug logs
-d6b677fe2b33 Remove '+' symbol from kernel version string
-c09680ae6c99 clk: msm: clock-cpu-8953: Use CLKFLAG_NO_RATE_CACHE for a53ssmux_perf/pwr
-24394f4ddaf3 qcom-cpufreq: Use CLKFLAG_NO_RATE_CACHE
-d3ba24d64d53 Add out directory to gitignore
-45093f2bc805 staging: prima: Ensure compatibility with GCC6
-3525ddf5958f Revert "power: reset: msm-poweroff: Compile out enable_emergency_dload_mode"
-ec0db802236e kernel: Fix all GCC 7.x warnings
-c55442cc4dbc Disable "maybe-uninitialized" warning globally
-d50c84cdb288 Revert "scripts: gcc-wrapper: Use wrapper to check compiler warnings"
-19d060fdd776 soc: qcom: Squash complete removal of spcom residuals
-3e0374bb8b14 wlan: Remove WLAN_FEATURE_HOLD_RX_WAKELOCK feature
-70a3157951f2 dtsi: use performance and bw_hwmon governor for devfreq
-93713d1a7ca8 f2fs: check cap_resource only for data blocks
-26e8f2ab5e5f Revert "f2fs: introduce f2fs_set_page_dirty_nobuffer"
-38d2e069f301 f2fs: clear PageError on writepage
-98c3005c4028 f2fs: call unlock_new_inode() before d_instantiate()
-b058d2747f54 f2fs: refactor read path to allow multiple postprocessing steps
-e0fe8eb88401 FROMLIST: fscrypt: allow synchronous bio decryption
-1e73dbadb07b f2fs/fscrypt: updates to v4.17-rc1
-ad7211427388 FROMLIST: f2fs: don't put dentry page in pagecache into highmem
-31e6b6bfe803 f2fs: updates on v4.16-rc1
-070490bd545e ANDROID: ext4: don't put symlink in pagecache into highmem
-ad203d94b37e f2fs: queue rapid GC on system_power_efficient_wq
-3b35de8994f1 f2fs: don't trigger rapid GC repeatedly
-119f58fb104d f2fs: make gc_no_gc_sleep_time much more conservative
-2ebd523fb54e f2fs: rapidly GC all invalid blocks when screen goes off & plugged in
-2c7fab152b53 f2fs: set ioprio of GC kthread to idle
-2601d8983a1f fscrypt: updates on 4.15-rc4
-
-   * packages/apps/Settings/
-295bfaa99b Merge pull request #980 from tfae/oreo
-
-====================
-     06-12-2018
-====================
-
-
-   * bootable/recovery/
-afc6454 recovery: Do not load time from /persist
-6ac3bb4 recovery: New install/progress animation
-
-   * packages/apps/Settings/
-5690ad95c6 Angler Maintainer Changes (#981)
-798c3741cf Fixes in strings/translations
-1bf4f052f0 Zuk Maintainer Changes
-8099ba6c68 Privacy Guard: Add icon for VPN permission
-3c7f254c6b Privacy Guard: Avoid NPE when tinting permission icons
-
-====================
-     06-11-2018
-====================
-
-   * android/
-6744938 manifest: android-8.1.0_r26 -> android-8.1.0_r30
-c5ead4f manifest: Track own external/libvorbis
-
-   * bionic/
-8e024ad3c linker: Make shim reference path absolute
-7bc47fc6f linker: Remove unused find_libraries declaration
-
-   * build/make/
-391cf9c7e build: Add new variable to hold generic build properties
-fb1a406d5 core: Remove deprecated kernel header dependency path warning
-cc183a18c build: Clean up makefile hook inclusions
-afa5bbb4d build: Include LineageOS specific properties in build.prop
-d7f06ccb3 Merge tag 'android-8.1.0_r30' of https://android.googlesource.com/platform/build into HEAD
-
-   * device/rr/sepolicy/
-9de5f95 Merge https://github.com/LineageOS/android_device_lineage_sepolicy into oreo
-
-   * frameworks/av/
-5e433d747 Merge tag 'android-8.1.0_r30' into lineage-15.1
-
-   * frameworks/base/
-c14d0a15996 base: introduce trust interface
-
-   * frameworks/opt/telephony/
-ccbfdaede Merge tag 'android-8.1.0_r30' into lineage-15.1
-
-   * hardware/interfaces/
-8184564c Merge tag 'android-8.1.0_r30' into lineage-15.1
 
    * lineage-sdk/
-42eb263 TrustInterface: Remove useless check
-5f75487 TrustInterface: Fix default root access value
-3f0c299 Fix config.xml indentation
-d55299f sdk: Introduce Trust Interface
 
-   * packages/apps/LineageParts/
-e72903f LineageParts: fix Trust onBoarding completion when clicking
-6ce4474 LineageParts: introduce Trust interface
+   * packages/apps/DUI/
+
+   * packages/apps/ResurrectionOTA/
 
    * packages/apps/Settings/
-a71cbe7dd5 Move BQ phone into the right catagory (#977)
-b91f8b141c Settings: add Trust interface hook
+d10c8ba Settings: Update maintainers for Z00L & Z00T
 
-   * packages/providers/MediaProvider/
-6fde9ca Merge tag 'android-8.1.0_r30' into lineage-15.1
-
-   * packages/providers/UserDictionaryProvider/
-d35f80e Merge tag 'android-8.1.0_r30' into lineage-15.1
-
-   * system/bt/
-2e5099c3 Merge tag 'android-8.1.0_r30' into lineage-15.1
-
-   * vendor/rr/
-012d15b5 main_version: Refactor for RR
-9fb40775 rr: main.mk: fix after f8422996
-9e3ccf4d RR: changelog for 6.1
-62124e51 Merge branch 'oreo' into HEAD
-8e41a55d vendor: introduce Trust interface
-4d7b0cde lineage: qcom: Enable TARGET_USES_COLOR_METADATA for msm8937 & msm8953
-f8422996 build: Clean up makefile inclusions
-5f576c48 apns: Add UPC Mobile
-a4a63e6f build: Use TOPDIR, not TOP
-61860731 clear_vars: Remove Maven leftovers
-4945c553 build: Remove HTTP_PREBUILT
-e64f286e build: Remove maven make rules
-8df42a73 rr: update for v6.1.0
+   * packages/services/OmniJaws/
 
 ====================
-     06-10-2018
+     07-14-2018
 ====================
 
-
-   * frameworks/native/
-bd406535b Merge tag 'android-8.1.0_r30' of https://android.googlesource.com/platform/frameworks/native into oreo
-
-   * hardware/lineage/interfaces/
-18f4e8d livedisplay: Don't use singletons for the stack
-f66d76e livedisplay: Correct macro copypasta
 
    * hardware/qcom/power/
-a67c703 power: Remove unused list utils
-0a53ddc power: Remove interaction_with_handle
-f9d6801 power: Remove unused ondemand related functions
-7fc57d1 power: Remove support for msm-dcvs governor
-a966c4c power: Remove powerhintparser
-d43c2c3 power: msm8974: Build with with BOARD_VNDK_VERSION
+64de35f power: Allow devices disabling power stats completely
+
+   * packages/apps/Settings/
+ca23d6d Update maintainer for merlin
 
 ====================
-     06-09-2018
+     07-13-2018
 ====================
 
 
-   * bionic/
-385bb1caf linker: Provide soinfo path of the shimmed binary
-2a6645597 Revert "linker: allow the linker to shim executables"
+====================
+     07-12-2018
+====================
 
-   * kernel/xiaomi/msm8953/
-9bd1b26524d8 arm64: crypto: reduce priority of core AES cipher
-50ad4a6bba3f arm64/crypto: use crypto instructions to generate AES key schedule
-d1ba7d6f50d7 arm64: crypto: increase AES interleave to 4x
-fa9ac9290813 arm64/crypto: issue aese/aesmc instructions in pairs
-a5e4f43c1716 arm64: crypto: Change priority of arm64 aes cipher.
-e123b6673147 crypto: arm64/crc32 - bring in line with generic CRC32
-a45ecdfc96cd crypto: crc32 - Add ARM64 CRC32 hw accelerated module
-6bf891398d43 UPSTREAM: scripts/mkcompile_h: Remove trailing spaces from compiler version
-4d741b0a0077 Merge remote-tracking branch 'als/kernel.lnx.3.18.r33-rel' into lineage-15.1
+
+   * frameworks/av/
+2ad1834 Camera: CameraHardwareInterface: Releasing mHIDLMemoryMapLock in QdataCallback
+0f5a5ed Camera:CameraService: Added lock on mHIDLMemPoolId in QDataCallback..
+
+====================
+     07-11-2018
+====================
+
+
+   * packages/apps/Settings/
+bb5a36a Update device maintainer for YU Yureka Black(garlic)
+
+   * vendor/rr/
+5ca74b1 Remove the Official selection from script
+
+====================
+     07-10-2018
+====================
+
+
+   * system/update_engine/
+7e347c2 update_engine: Add performance mode
+
+====================
+     07-09-2018
+====================
+
+
+   * hardware/qcom/fm/
+
+   * packages/apps/Eleven/
+
+   * packages/apps/FMRadio/
+
+   * packages/apps/Gallery2/
 
    * packages/apps/Jelly/
-6432e80 Jelly: Add support for multiple windows
 
-   * packages/apps/Settings/
-f97842bd7a Change oreo device maintainer to me (#976)
+   * packages/apps/LockClock/
 
-====================
-     06-08-2018
-====================
+   * packages/apps/Recorder/
 
+   * packages/apps/Snap/
 
-   * hardware/lineage/interfaces/
-ac865c8 livedisplay: Remove unused using statements
-412bc94 livedisplay: Move LegacyMMController inclusion to impl
+   * packages/apps/Terminal/
 
-   * kernel/xiaomi/msm8953/
-7c1a6df6df0b Merge https://github.com/android-linux-stable/msm-3.18 into lineage-15.1
+   * packages/providers/WeatherProvider/
 
-   * lineage-sdk/
-e07772c Revert "lineage-sdk: Switch back to AOSP TwilightService"
-55dc83d Add led capability LIGHTS_ADJUSTABLE_BATTERY_LED_BRIGHTNESS
-
-   * packages/apps/Settings/
-03f571552b Add on7xelte to oficial (#975)
-
-====================
-     06-07-2018
-====================
-
-
-   * packages/apps/Settings/
-51016620c0 Add Asus Zenfone Max Pro M1 (X00TD) (#974)
